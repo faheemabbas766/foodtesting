@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering System</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Menu -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li>Breakfast Menu</li>
+                <li>Food Menu</li>
+                <li>Burgers</li>
+                <li>Hot Dogs</li>
+                <li>Sides</li>
+                <li>Drink Menu</li>
+                <li>Desserts Menu</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="customer-details-toggle">
+                <button id="openCustomerDetails">Customer Details +</button>
+            </div>
+            <div class="food-menu">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for food items..." />
+                    <button id="searchBtn">Search</button>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item" data-name="BBQ Rasher" data-price="6.95">
+                        <img src="images/burger.jpg" alt="BBQ Rasher">
+                        <h4>BBQ Rasher</h4>
+                        <p>This burger is very nice for Chicken Lovers.</p>
+                        <button class="choose-btn">Choose</button>
+                    </div>
+                    <div class="menu-item" data-name="Build Your Own" data-price="7.95">
+                        <img src="images/burger.jpg" alt="Build Your Own">
+                        <h4>Build Your Own</h4>
+                        <p>This burger is very nice for Chicken Lovers.</p>
+                        <button class="choose-btn">Choose</button>
+                    </div>
+                </div>
+                
+                <div class="menu-items">
+                    <div class="menu-item" data-name="BBQ Rasher" data-price="6.95">
+                        <img src="images/burger.jpg" alt="BBQ Rasher">
+                        <h4>BBQ Rasher</h4>
+                        <p>This burger is very nice for Chicken Lovers.</p>
+                        <button class="choose-btn">Choose</button>
+                    </div>
+                    <div class="menu-item" data-name="Build Your Own" data-price="7.95">
+                        <img src="images/burger.jpg" alt="Build Your Own">
+                        <h4>Build Your Own</h4>
+                        <p>This burger is very nice for Chicken Lovers.</p>
+                        <button class="choose-btn">Choose</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="order-items"></div>
+            <h4>Total: £<span id="totalPrice">0.00</span></h4>
+            <button id="clearOrder">Clear Screen</button>
+        </div>
+    </div>
+
+    <!-- Customer Details Overlay -->
+    <div id="customerDetailsOverlay" class="overlay hidden">
+        <div class="form-container">
+            <h2>Booking Form</h2>
+            <form id="customerDetailsForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date & Time:</label>
+                    <input type="text" id="date" placeholder="dd/mm/yyyy, --:--">
+                </div>
+                <button type="button" id="closeCustomerDetails">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
